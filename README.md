@@ -11,9 +11,9 @@ Leon Boussen
 
 Artist:
 
-Lisa van Bokhoven
+Elisa van Bokhoven
 
-Eliza Rijke
+Liza Rijke
 
 Marcellus Moerman
 
