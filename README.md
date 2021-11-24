@@ -2,13 +2,15 @@
 sus amongus?!
 
 Dev:
+
 Timo Zandbergen
 
 Damon Jellema
 
 Leon Boussen
 
-Artist
+Artist:
+
 Lisa van Bokhoven
 
 Eliza Rijke
