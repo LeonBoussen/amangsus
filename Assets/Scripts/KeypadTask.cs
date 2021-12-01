@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class KeypadTask : MonoBehaviour
 {
     public Text _cardCode;
     public Text _inputCode;
+
+    public GameObject Task;
 
     public int _codeLength = 5;
 
@@ -34,35 +37,47 @@ public class KeypadTask : MonoBehaviour
 
         _inputCode.text += number;
 
-        if (_inputCode.text == _cardCode.text)
-        {
-            _inputCode.text = "Correct";
-            StartCoroutine(ResetCode());
-        }
-
-        if(_inputCode.text.Length >= _codeLength)
-        {
-            _inputCode.text = "failt Task";
-            StartCoroutine(ResetCode());
-        }
     }
 
     private void Update()
     {
-        print(_inputCode);
-        print(_inputCode.text);
-        print(_cardCode);
-        print(_cardCode.text);
+        Check();
     }
 
-    private IEnumerator ResetCode()
-    {
+     private IEnumerator ResetCode()
+     {
+        _inputCode.text = "fail!";
         _isResetting = true;
 
         yield return new WaitForSeconds(_codeRestTimeInSeconds);
 
         _inputCode.text = string.Empty;
         _isResetting = false;
+     }
+
+    private void Check()
+    {
+
+        if (_inputCode.text.Length == _codeLength)
+        {
+            if (_inputCode.text == _cardCode.text)
+            {
+                print("W");
+                Win();
+            }
+            else
+            {
+                print("L");
+                ResetCode();
+            }
+        }
+    }
+
+    private IEnumerator Win()
+    {
+        _inputCode.text = "Correct!";
+        yield return new WaitForSeconds(_codeRestTimeInSeconds);
+        Task.SetActive(false);
     }
 }
 
