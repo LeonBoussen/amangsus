@@ -5,12 +5,18 @@ using UnityEngine;
 public class MovementScript : MonoBehaviour
 {
     public float moveSpeed;
-    public Rigidbody2D rb;
+    private Rigidbody2D rb;
     private Vector2 moveDirection;
+
+    void Start()
+    {
+        
+    }
 
     // Update is called once per frame
     void Update()
     {
+        
         processInputs();
     }
 
@@ -31,4 +37,16 @@ public class MovementScript : MonoBehaviour
     {
         rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
     }
+
+
+    private void lookForward()
+    {
+        
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        
+    }
+    
 }
