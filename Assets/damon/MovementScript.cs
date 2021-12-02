@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class MovementScript : MonoBehaviour
 {
+    public GameObject InteractIcon;
+
     public float moveSpeed;
     private Rigidbody2D rb;
     private Vector2 moveDirection;
 
-    void Start()
-    {
-        
-    }
+    private Vector2 boxSize = new Vector2(0.1f, 1f);
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.E))
+            CheckInteraction();
+
         processInputs();
     }
 
@@ -38,15 +39,36 @@ public class MovementScript : MonoBehaviour
         rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
     }
 
-
-    private void lookForward()
+    public void OpenInteractableIcon()
     {
-        
+        InteractIcon.SetActive(true);
     }
 
-    void OnCollisionEnter2D(Collision2D col)
+    public void CloseInteractableIcon()
     {
-        
+        InteractIcon.SetActive(false);
     }
-    
+
+    private void CheckInteraction()
+    {
+        RaycastHit2D[] hits = Physics2D.BoxCastAll(transform.position, boxSize, 0, Vector2.zero);
+
+        if (hits.Length > 0)
+        {
+            foreach (RaycastHit2D rc in hits)
+            {
+                if (rc.transform.GetComponent<Interactable>())
+                {
+                    rc.transform.GetComponent<Interactable>().Interact();
+                    return;
+                }
+            }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision collision)
+    {
+        Debug.Log("Collision");
+    }
+
 }
