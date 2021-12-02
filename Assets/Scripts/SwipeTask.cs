@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class SwipeTask : MonoBehaviour
 {
     public List<SwipePoint> _swipePoints = new List<SwipePoint>();
@@ -50,6 +50,7 @@ public class SwipeTask : MonoBehaviour
             _currentSwipePointIndex = 0;
             StartCoroutine(FinishTask(true));
             print("Complete");
+            SceneManager.LoadScene(2);
         }
     }
 }

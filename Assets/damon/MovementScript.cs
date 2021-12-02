@@ -12,6 +12,12 @@ public class MovementScript : MonoBehaviour
 
     private Vector2 boxSize = new Vector2(0.1f, 1f);
 
+    private void Start()
+    {
+        rb = gameObject.GetComponent<Rigidbody2D>();
+    }
+
+
     // Update is called once per frame
     void Update()
     {
@@ -66,7 +72,7 @@ public class MovementScript : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Collision");
     }
