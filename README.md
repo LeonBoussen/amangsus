@@ -1,7 +1,7 @@
 # amangsus
 sus amongus?!
 
-Dev:
+## Dev:
 
 Timo Zandbergen
 
@@ -9,7 +9,7 @@ Damon Jellema
 
 Leon Boussen
 
-Artist:
+## Artist:
 
 Elisa van Bokhoven
 
