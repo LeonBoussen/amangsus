@@ -1,5 +1,5 @@
 # amangsus
-sus amongus?!!
+sus amongus?!
 
 ## Dev:
 
