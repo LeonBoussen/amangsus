@@ -53,7 +53,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6077361197214956590, guid: fc5d9d62ca5aade4e960958f851d465f, type: 3}
       propertyPath: m_Name
-      value: PlayerDefault
+      value: ImposterPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 6077361197214956590, guid: fc5d9d62ca5aade4e960958f851d465f, type: 3}
+      propertyPath: m_TagString
+      value: Impostor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc5d9d62ca5aade4e960958f851d465f, type: 3}

@@ -5,8 +5,6 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float moveSpeed;
-
-    public GameObject task;
     private Rigidbody2D rb;
 
     private Vector2 moveDirection;
@@ -38,10 +36,5 @@ public class Player : MonoBehaviour
     void Move()
     {
         rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
-    }
-
-    public void OpenTask()
-    {
-        task.SetActive(true);
     }
 }
