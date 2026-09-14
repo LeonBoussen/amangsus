@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 420eea0c2b38c4a4596355a6fac2a6aa
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - imposterPrefab: {fileID: 8293566108770223015, guid: 4cc007ffd423c224397ca7375b7e6658, type: 3}
+  - crewmatePrefab: {fileID: 6077361197214956590, guid: fc5d9d62ca5aade4e960958f851d465f, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
